@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
       .join("\n\n");
 
     const response = await client.messages.create({
-      model: "claude-sonnet-4-5-20250514",
+      model: "claude-sonnet-4-5",
       max_tokens: 16000,
       ...(systemText ? { system: systemText } : {}),
       messages,
